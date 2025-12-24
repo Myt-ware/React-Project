@@ -1,15 +1,15 @@
 import React from 'react'
-
+import { useState } from "react";
 import './Home.css'
 import { Container, Dropdown, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-function HomeNavBar() {
+function HomeNavBar(){
+  const [setIsOpen] = useState(false);
   return (
     <div>
       <Navbar expand="lg" className="main">
   <Container>
-
 
     <div className="d-flex align-items-center">
       <Image src="camera.png" width="50" className="me-2" />
@@ -28,12 +28,12 @@ function HomeNavBar() {
     text-center
     w-100">
 
-  <Nav.Link className="text-light b1" as={Link} to={"/"}>HOME</Nav.Link>
+  <Nav.Link className="text-light b1" as={Link} to={"/"} onClick={() => setIsOpen(false)}>HOME</Nav.Link>
   
-  <Nav.Link className="text-light b1" as={Link} to={"/About"}>ABOUT</Nav.Link>
+  <Nav.Link className="text-light b1" as={Link} to={"/About"} onClick={() => setIsOpen(false)}>ABOUT</Nav.Link>
 
   <Dropdown className='b1'>
-    <Dropdown.Toggle className="bg-black text-light border-0 b1">
+    <Dropdown.Toggle className="bg-black text-light border-0 b1" onClick={() => setIsOpen(false)}>
       GALLERY
     </Dropdown.Toggle>
 
@@ -64,8 +64,8 @@ function HomeNavBar() {
     </Dropdown.Menu>
   </Dropdown>
 
-  <Nav.Link className="text-light b1" as={Link} to={"/Services"}>SERVICES</Nav.Link>
-  <Nav.Link className="text-light b1" as={Link} to={"/Contact"}>CONTACT</Nav.Link>
+  <Nav.Link className="text-light b1" as={Link} to={"/Services"} onClick={() => setIsOpen(false)}>SERVICES</Nav.Link>
+  <Nav.Link className="text-light b1" as={Link} to={"/Contact"} onClick={() => setIsOpen(false)}>CONTACT</Nav.Link>
 
 </Nav>
 
