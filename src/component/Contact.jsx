@@ -1,9 +1,12 @@
 import React from 'react';
 import './Contact.css'
+import HomeNavBar from './HomeNavBar';
 
 function Contact() {
   return (
     <div>
+<HomeNavBar/>
+
       <section className="contact">
         <div className="contact-header">
           <h1>Contact Me</h1>

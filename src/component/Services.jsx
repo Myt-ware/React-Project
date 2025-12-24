@@ -1,10 +1,13 @@
 import React from 'react'
 import './Services.css'
+import HomeNavBar from './HomeNavBar'
 
 
 function Services() {
   return (
     <div>
+<HomeNavBar/>
+
       <section class="services">
     <div class="services-header">
       <h1>Our Services</h1>

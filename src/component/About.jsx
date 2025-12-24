@@ -2,11 +2,14 @@ import React from 'react'
 import './About.css'
 import { Container, Dropdown, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import HomeNavBar from './HomeNavBar';
 
 
 function about() {
   return (
     <div>
+<HomeNavBar/>
+
       <section class="about">
     <div class="about-container">
       <div class="about-text">
